@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>P.L. Stuart | The Drowned Kingdom Saga</title>
+<meta name="description" content="A homepage idea for P.L. Stuart, author of The Drowned Kingdom Saga.">
+<meta property="og:title" content="P.L. Stuart | The Drowned Kingdom Saga">
+<meta property="og:description" content="A homepage idea made by Sparsh Saini for P.L. Stuart. Not his official site.">
+<meta property="og:image" content="https://sparshsainied-prog.github.io/plstuart/img/og.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/icon.png">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.className+=" js"</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* Palette from A Drowned Kingdom: deep water under the sigil, the turquoise sky, the pale haze, the gold of the sigil and the title */
+:root{
+  --deep:#0C3436; --sea:#145154; --teal:#2E8C88; --haze:#DCEDEA;
+  --gold:#D9AE45; --gold-dk:#7A5A12; --ink:#071E20; --paper:#EEF5F2;
+  --display:"Cinzel", "Trajan Pro", Georgia, serif; --text:"EB Garamond", Georgia, serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--deep);color:var(--paper);font:400 1.2rem/1.6 var(--text)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:8px;top:8px;background:var(--paper);color:var(--ink);padding:.4rem .8rem;z-index:5}
+.strip{background:var(--ink);color:var(--haze);font-size:.95rem;text-align:center;padding:.5rem 1rem}
+
+/* Hero: the ring on A Drowned Kingdom is a window onto the rest of the saga */
+.hero{position:relative;height:460vh;background:var(--deep)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;grid-template-columns:1fr minmax(0,54vh) 1fr;align-items:center;column-gap:4vw;padding:0 5vw}
+.book{grid-column:2;grid-row:1;position:relative;aspect-ratio:2/3;width:100%;transform-origin:49.2% 39%;will-change:transform;box-shadow:0 30px 60px -24px rgba(0,0,0,.75)}
+.book>img{position:absolute;inset:0;width:100%;height:100%}
+.above{position:absolute;left:0;top:0;width:100%;height:51.5%;overflow:hidden}
+.ring{will-change:opacity;position:absolute;left:24.8%;top:44.17%;width:48.8%;aspect-ratio:1;border-radius:50%;overflow:hidden}
+.ring img{position:absolute;inset:0;width:100%;height:100%;opacity:0;will-change:opacity}
+.ring img.on{opacity:1}
+.cap{grid-column:3;grid-row:1;justify-self:start;position:relative;z-index:2;width:17rem;height:5.5rem}
+.cap p{position:absolute;left:0;top:0;margin:0;background:var(--ink);padding:.7rem 1rem .8rem;opacity:0;will-change:opacity}
+.cap p.on{opacity:1}
+.cap b{display:block;font:600 .8rem/1 var(--display);color:var(--gold);letter-spacing:.12em;margin-bottom:.35rem}
+.cap span{font:400 1.25rem/1.15 var(--display);color:var(--paper)}
+.words{grid-column:1;grid-row:1;justify-self:end;max-width:25rem;position:relative;z-index:2}
+.js .words{opacity:0;will-change:opacity}
+html:not(.js) .hero{height:auto}
+html:not(.js) .cap,html:not(.js) .ring{display:none}
+.words h1{font:600 clamp(2.2rem,3.6vw,3.4rem)/1.05 var(--display);color:var(--gold);margin:0 0 1rem}
+.words p{margin:0 0 1.4rem}
+.btn{display:inline-flex;align-items:center;white-space:nowrap;min-height:46px;font:600 1rem/1 var(--display);color:var(--ink);background:var(--gold);padding:.8rem 1.25rem;text-decoration:none;border:1px solid var(--gold);border-radius:0}
+.btn.line{background:transparent;color:var(--gold)}
+.btn:hover{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* Calm sections */
+section{padding:clamp(4rem,9vw,7rem) 6vw}
+.wrap{max-width:70rem;margin:0 auto}
+h1,h2{text-wrap:balance}
+h2{font:600 clamp(1.9rem,3.6vw,2.8rem)/1.08 var(--display);margin:0 0 1.2rem;color:var(--gold)}
+.latest{background:var(--sea)}
+.latest .wrap{display:grid;grid-template-columns:minmax(0,19rem) 1fr;gap:4rem;align-items:start}
+.latest img{box-shadow:0 24px 50px -20px rgba(0,0,0,.7)}
+.latest .first{font:500 1.5rem/1.35 var(--text);font-style:italic;color:var(--haze)}
+.latest p{max-width:38rem}
+.latest .btn.line{color:var(--paper)}
+.saga{background:var(--haze);color:var(--ink)}
+.saga h2{color:var(--sea)}
+.saga :focus-visible{outline-color:var(--sea)}
+.saga .intro{max-width:40rem;margin:0 0 2.5rem}
+.shelf{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:1.2rem;align-items:end}
+.shelf li{display:flex;flex-direction:column;gap:.6rem}
+.shelf .n{font:600 .8rem/1 var(--display);letter-spacing:.12em;color:var(--gold-dk)}
+.shelf .t{font:600 1.02rem/1.2 var(--display);margin:0;min-height:2.5em}
+.shelf a.buy{font-size:1rem;color:var(--sea);text-underline-offset:3px}
+.shelf .next{aspect-ratio:2/3;border:2px solid var(--gold-dk);display:grid;place-items:center;text-align:center;padding:1rem}
+.shelf .next span{font:600 1rem/1.25 var(--display);color:var(--gold-dk)}
+.praise{background:var(--deep)}
+.praise blockquote{margin:0 auto;max-width:48rem;font:400 clamp(1.35rem,2.4vw,1.8rem)/1.4 var(--text);font-style:italic;color:var(--paper)}
+.praise cite{display:block;margin-top:1.2rem;font:400 1rem/1.4 var(--display);font-style:normal;color:var(--gold)}
+.signed{background:var(--gold);color:var(--ink)}
+.signed h2{color:var(--ink)}
+.signed .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.signed .btn{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.signed .btn:hover{background:var(--deep);border-color:var(--deep);color:var(--paper)}
+.signed :focus-visible{outline-color:var(--ink)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,22rem) 1fr;gap:4rem;align-items:center}
+.about p{max-width:38rem}
+.about .row a{color:var(--gold)}
+footer{background:var(--ink);color:var(--haze);font-size:.95rem;padding:1.5rem 6vw 2rem}
+
+@media (max-width:1100px){.shelf{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:820px){
+  .hero{height:420vh}
+  .stage{grid-template-columns:1fr;grid-template-rows:auto auto;align-content:center;row-gap:1.2rem;padding:0 6vw}
+  .book{grid-column:1;grid-row:1;width:min(64vw,44vh);justify-self:center}
+  .cap,.words{grid-column:1;grid-row:2;justify-self:center;text-align:center}
+  .cap{width:100%;max-width:20rem;height:5rem}
+  .cap p{left:50%;transform:translateX(-50%);white-space:nowrap}
+  .words{max-width:22rem}
+  .words h1{font-size:1.75rem;margin-bottom:.5rem}
+  .words p{font-size:1.05rem;margin-bottom:.9rem}
+    .latest .wrap,.signed .wrap,.about .wrap{grid-template-columns:1fr;gap:2rem}
+  .latest img{max-width:15rem}
+  .shelf{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-height:560px) and (min-width:821px){.words p{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#latest">Skip to the books</a>
+<div class="strip">A homepage idea made by Sparsh Saini for P.L. Stuart. Not their official site.</div>
+
+<header class="hero" id="hero">
+  <div class="stage">
+    <div class="words">
+      <h1>The Drowned Kingdom Saga</h1>
+      <p>Othrun leads the last survivors of his people across the Shimmering Sea, far from a home now lost beneath the waves.</p>
+      <a class="btn" href="https://www.amazon.com/dp/B08VS15WTR">Start with book one</a>
+    </div>
+    <div class="book" role="img" aria-label="The cover of A Drowned Kingdom by P.L. Stuart: a gold triangle inside a gold ring rises from a turquoise sea.">
+      <img src="img/cover.jpg" alt="" width="1000" height="1500" fetchpriority="high">
+      <div class="above"><div class="ring">
+        <img class="on" src="img/b6.jpg" alt="" width="720" height="720">
+        <img src="img/b5.jpg" alt="" width="720" height="720">
+        <img src="img/b4.jpg" alt="" width="720" height="720">
+        <img src="img/b3.jpg" alt="" width="720" height="720">
+        <img src="img/b2.jpg" alt="" width="720" height="720">
+      </div></div>
+      <img src="img/sigil.webp" alt="" width="1000" height="1500">
+    </div>
+    <div class="cap" aria-hidden="true">
+      <p class="on"><b>BOOK VI</b><span>A Black Dragon On Red</span></p>
+      <p><b>BOOK V</b><span>A Pack of Wolves</span></p>
+      <p><b>BOOK IV</b><span>A Lion's Pride</span></p>
+      <p><b>BOOK III</b><span>Lord and King</span></p>
+      <p><b>BOOK II</b><span>The Last of the Atalanteans</span></p>
+      <p><b>BOOK I</b><span>A Drowned Kingdom</span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="latest" id="latest">
+  <div class="wrap">
+    <img src="img/b6-cover.jpg" alt="The cover of A Black Dragon On Red by P.L. Stuart: a black dragon on a red field." width="400" height="600" loading="lazy">
+    <div>
+      <h2>Book six: A Black Dragon On Red</h2>
+      <p class="first">Nightsoul. A name striking terror into the hearts of Eltnia's people for decades.</p>
+      <p>Othrun once killed Nightsoul's mother, Nulthe, at her own coven. Now Borenia's shadowy monarch has moved against Othrun's father-in-law, King Irly of Badonia, and Othrun has to march west into the gloom with his wife, the mage Sila, at his side.</p>
+      <div class="row">
+        <a class="btn" href="https://www.amazon.ca/dp/B0GZ92FF9P">Amazon</a>
+        <a class="btn line" href="https://www.kobo.com/ca/en/ebook/a-black-dragon-on-red">Kobo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="saga">
+  <div class="wrap">
+    <h2>Read it in order</h2>
+    <p class="intro">Othrun begins as a flawed and bigoted lord. The saga follows him towards change, and towards power in a new world after the fall of his homeland, which is based on Plato's lost Atlantis.</p>
+    <ol class="shelf">
+      <li><img src="img/b1-cover.jpg" alt="A Drowned Kingdom cover" width="400" height="600" loading="lazy"><span class="n">BOOK I</span><p class="t">A Drowned Kingdom</p><a class="buy" href="https://www.amazon.com/dp/B08VS15WTR">Amazon</a></li>
+      <li><img src="img/b2-cover.jpg" alt="The Last of the Atalanteans cover" width="400" height="600" loading="lazy"><span class="n">BOOK II</span><p class="t">The Last of the Atalanteans</p><a class="buy" href="https://www.amazon.com/dp/B09WZF1GWC">Amazon</a></li>
+      <li><img src="img/b3-cover.jpg" alt="Lord and King cover" width="400" height="600" loading="lazy"><span class="n">BOOK III</span><p class="t">Lord and King</p><a class="buy" href="https://www.kobo.com/ca/en/ebook/lord-and-king">Kobo</a></li>
+      <li><img src="img/b4-cover.jpg" alt="A Lion's Pride cover" width="400" height="600" loading="lazy"><span class="n">BOOK IV</span><p class="t">A Lion's Pride</p><a class="buy" href="https://www.amazon.ca/dp/B0CVNG76J7">Amazon</a></li>
+      <li><img src="img/b5-cover.jpg" alt="A Pack of Wolves cover" width="400" height="600" loading="lazy"><span class="n">BOOK V</span><p class="t">A Pack of Wolves</p><a class="buy" href="https://www.amazon.ca/dp/B0F2N5K9T9">Amazon</a></li>
+      <li><img src="img/b6-cover.jpg" alt="A Black Dragon On Red cover" width="400" height="600" loading="lazy"><span class="n">BOOK VI</span><p class="t">A Black Dragon On Red</p><a class="buy" href="https://www.amazon.ca/dp/B0GZ92FF9P">Amazon</a></li>
+      <li><div class="next"><span>Book VII<br>still to come</span></div><span class="n">BOOK VII</span><p class="t">The saga is planned for seven books</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="praise">
+  <blockquote>“This is a deep, often sophisticated examination of human flaws and philosophies set in conflict, with one human being's ambitions at war with the fabric of his personality.”<cite>Janny Wurts, author of the Wars of Light and Shadow series</cite></blockquote>
+</section>
+
+<section class="signed">
+  <div class="wrap">
+    <div>
+      <h2>Signed by P.L.</h2>
+      <p>Personalised, signed copies come straight from P.L. Ask for yours through his contact page.</p>
+      <a class="btn" href="https://www.plstuart.com/contact.html">Ask for a signed copy</a>
+    </div>
+    <div>
+      <h2>The special editions</h2>
+      <p>The Broken Binding made signed special editions of the first two books, with new cover art by Eshpur, sprayed edges, foil on the boards and a sewn binding.</p>
+      <a class="btn" href="https://thebrokenbindingsub.com/products/drowned-kingdom-2-pack">See the two-book set</a>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <img src="img/paul.jpg" alt="P.L. Stuart in a blue jacket, smiling and holding a copy of The Last of the Atalanteans." width="587" height="800" loading="lazy">
+    <div>
+      <h2>P.L. Stuart</h2>
+      <p>P.L. was born in Toronto and holds a university degree in English, specialising in Medieval Literature. He is an Assistant Editor for Before We Go Blog and one of the hosts of Page Chewing.</p>
+      <p>On his own YouTube channel he hosts Six Elementals Interviews, live on Saturdays, chatting with fantasy and science fiction authors and readers.</p>
+      <div class="row">
+        <a href="https://www.youtube.com/@thedrownedkingdomsaga7847">Six Elementals on YouTube</a>
+        <a href="https://www.instagram.com/p.l.stuart/">@p.l.stuart</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>A mockup made by Sparsh Saini for P.L. Stuart. Not affiliated, not live.</footer>
+
+<script>
+(function(){
+  var hero=document.getElementById('hero'), book=hero.querySelector('.book');
+  var ring=[].slice.call(hero.querySelectorAll('.ring img')), caps=[].slice.call(hero.querySelectorAll('.cap p'));
+  var ringBox=hero.querySelector('.ring'), cap=hero.querySelector('.cap'), words=hero.querySelector('.words');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp=function(v){return v<0?0:v>1?1:v}, seg=function(p,a,b){return clamp((p-a)/(b-a))};
+  var io=function(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2};
+  // Each later book holds the ring in turn, newest first, then the ring clears to book one's own sky.
+  var fades=[[.10,.17],[.25,.32],[.40,.47],[.55,.62],[.70,.77]];
+  var top=0, span=1, s0=3, dy=0, ticking=false;
+  function measure(){
+    book.style.transform='none';
+    top=hero.offsetTop; span=hero.offsetHeight-innerHeight;
+    var r=book.getBoundingClientRect(), d=r.width*.488;
+    s0=Math.min(innerWidth,innerHeight)*(innerWidth<821?.84:.72)/d;
+    dy=innerHeight/2-(r.top+r.height*.39);
+    var sr=hero.querySelector('.stage').getBoundingClientRect(); dy+=sr.top;
+  }
+  function draw(p){
+    var c=io(seg(p,0,.9)), s=s0+(1-s0)*c;
+    book.style.transform='translate(0,'+(dy*(1-c)).toFixed(1)+'px) scale('+s.toFixed(4)+')';
+    var shown=0;
+    for(var i=0;i<fades.length;i++){ if(p>=fades[i][0]) shown=i+1; }
+    for(var j=1;j<ring.length;j++) ring[j].style.opacity=seg(p,fades[j-1][0],fades[j-1][1]).toFixed(3);
+    ringBox.style.opacity=(1-seg(p,fades[4][0],fades[4][1])).toFixed(3);
+    for(var k=0;k<caps.length;k++) caps[k].style.opacity=(k===shown?1:0);
+    cap.style.opacity=(1-seg(p,.84,.9)).toFixed(3);
+    words.style.opacity=seg(p,.86,.97).toFixed(3);
+  }
+  function frame(){ ticking=false; draw(clamp((scrollY-top)/span)); }
+  if(reduce){ book.style.transform='none'; return; }
+  measure();
+  hero.addEventListener('focusin',function(){ if(scrollY<top+span) scrollTo(0,top+span); });
+  frame();
+  addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(frame);} },{passive:true});
+  addEventListener('resize',function(){ measure(); frame(); });
+})();
+</script>
+</body>
+</html>
